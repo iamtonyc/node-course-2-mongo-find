@@ -9,11 +9,19 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 
   // db.collection('Users').deleteMany({ name: 'Andrew' });
 
-  db.collection('Users').findOneAndDelete({ _id: new ObjectID('5be453818ecbce4fc856fcb3') }).then((results) => {
-    console.log(JSON.stringify(results,undefined,2));
+  db.collection('Todos').findOneAndUpdate({
+     _id: new ObjectID('5be452198ecbce4fc856fcb1')
+    },{
+      $set: {
+        completed:true
+      }
+    },{
+      returnOriginal: false
+    }).then((result) => {
+    console.log(result);
   });
 
-  //s5be452198ecbce4fc856fcb1
+  
 
 
 
