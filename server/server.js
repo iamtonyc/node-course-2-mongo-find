@@ -29,14 +29,4 @@ app.listen(3000, ()=>{
   console.log('Started on port 3000');
 });
 
-
-// var otherTodo =new Todo({
-//   text: 'Something to Do'
-// })
-
-// otherTodo.save().then((doc)=>{
-//     console.log(JSON.stringify(doc,undefined, 2));
-//   },(e)=>{
-//     console.log('Unable to save todo',e);
-//   });
-
+module.exports={app};
